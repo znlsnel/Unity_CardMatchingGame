@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject producer; // 해당 스테이지 제작자의 정보(이름 Text, Image, 설명 Text)
 
     // 카드 2개의 정보를 가지고 있어야 한다
-        [NonSerialized] public Card firstCard; 
-        [NonSerialized] public Card secondCard;
+    [NonSerialized] public Card firstCard;
+    [NonSerialized] public Card secondCard;
 
     public Text timeTxt;
     public GameObject clearText;    // 클리어(성공메세지)
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public AudioClip clip;
 
     public int cardCount = 0;      // 게임 씬에 남아있는 카드 개수
-    float time = 0.0f;     
+    float time = 0.0f;
 
     private void Awake()
     {
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             // 삭제
             // 이때 여기서 바로 Destroy를 호출하지 않고, Card 클래스에서 만든 삭제함수를 사용한다
             // 비활성화한 카드는 cardPool에 추가
-            audioSource.PlayOneShot(clip); 
+            audioSource.PlayOneShot(clip);
 
             firstCard.DestroyCard();
             secondCard.DestroyCard();
