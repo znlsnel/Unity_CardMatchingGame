@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-        [NonSerialized] public int idx = 0;    // Board¿¡¼­ ´ëÀÔÇÒ ÀÎµ¦½º
+        [NonSerialized] public int idx = 0;    // Boardï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
 
 	[SerializeField] GameObject front;    // Front
 	[SerializeField] GameObject back;     // Front
 	[SerializeField] string imagePath;
-	[SerializeField] SpriteRenderer frontImage;   // Front¿¡ µé¾îÀÖ´Â SpriteRenderer
+	[SerializeField] SpriteRenderer frontImage;   // Frontï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ SpriteRenderer
 
 	AudioSource audioSource;
         Animator anim;
@@ -31,7 +31,7 @@ public class Card : MonoBehaviour
     public void Setting(int number)
     {
         idx = number;
-        // ºÒ·¯¿Â Ä«µå¸¦ front¿¡ ´ëÀÔÇÑ´Ù
+        // ï¿½Ò·ï¿½ï¿½ï¿½ Ä«ï¿½å¸¦ frontï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
         frontImage.sprite = Resources.Load<Sprite>($"{imagePath}/image_{idx}");
     }
     public void SettingCard(int number)
@@ -43,30 +43,30 @@ public class Card : MonoBehaviour
     {
         if (GameManager.Instance.secondCard != null) return;
 
-        audioSource.PlayOneShot(audioclip);  // AudioClip³¢¸® °ãÄ¡Áö ¾Ê´Â´Ù
-        anim.SetBool("isOpen", true);   // CardFlip ¾Ö´Ï¸ÞÀÌ¼ÇÀ¸·Î ¹Ù²Û´Ù
+        audioSource.PlayOneShot(audioclip);  // AudioClipï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ê´Â´ï¿½
+        anim.SetBool("isOpen", true);   // CardFlip ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Û´ï¿½
         front.SetActive(true);
         back.SetActive(false);
 
-        // firstCard°¡ ºñ¾ú´Ù¸é 
+        // firstCardï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½ 
         if (GameManager.Instance.firstCard == null)
         {
-            // firstCard¿¡ ³» Á¤º¸¸¦ ³Ñ°ÜÁØ´Ù
+            // firstCardï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ï¿½Ø´ï¿½
             GameManager.Instance.firstCard = this;
         }
-        // firstCard°¡ ºñ¾îÀÖÁö ¾Ê´Ù¸é 
+        // firstCardï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Ù¸ï¿½ 
         else
         {
-            // secondCard¿¡ ³» Á¤º¸¸¦ ³Ñ°ÜÁØ´Ù
+            // secondCardï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°ï¿½ï¿½Ø´ï¿½
             GameManager.Instance.secondCard = this;
 
-            // MatchedÇÔ¼ö¸¦ È£ÃâÇÑ´Ù
+            // Matchedï¿½Ô¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ñ´ï¿½
             GameManager.Instance.Matched();
         }
     }
     public void DestroyCard()
     {
-        Invoke("DestroyCardInvoke", 1.0f);  // 1ÃÊ ÈÄ »èÁ¦
+        Invoke("DestroyCardInvoke", 1.0f);  // 1ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
     void DestroyCardInvoke()
     {
@@ -78,7 +78,7 @@ public class Card : MonoBehaviour
     }
     void CloseCardInvoke()
     {
-        anim.SetBool("isOpen", false);  // CardIdle ¾Ö´Ï¸ÞÀÌ¼ÇÀ¸·Î ¹Ù²Û´Ù
+        anim.SetBool("isOpen", false);  // CardIdle ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Û´ï¿½
         front.SetActive(false);
         back.SetActive(true);
     }
