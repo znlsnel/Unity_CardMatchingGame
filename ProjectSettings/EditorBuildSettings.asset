@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/YS_MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Seonggyun/Scenes/StartScene.unity
+    path: Assets/Scenes/StartScene.unity
     guid: ef887f18788d6e8489ef77555746f1e3
   - enabled: 1
-    path: Assets/Seonggyun/Scenes/Stage1.unity
+    path: Assets/Scenes/SG_Stage.unity
     guid: c058c176097229849a701b609476e8f6
   - enabled: 1
     path: Assets/Seonggyun/Scenes/Stage2.unity
@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Seonggyun/Scenes/Stage3.unity
     guid: 9cb77f2632e80b14bbae66f69613bfd0
   - enabled: 1
-    path: Assets/Seonggyun/Scenes/EndScene.unity
+    path: Assets/Scenes/EndScene.unity
     guid: 2f41bd764c6452040ad379ea2cef5c22
   m_configObjects: {}
