@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   front: {fileID: 6893553046212005752}
   back: {fileID: 5284987852997390355}
-  imagePath: Images/Image_youngsong
+  imagePath: Images/Image_Seonggyun
   frontImage: {fileID: 5106066671657115577}
   audioclip: {fileID: 8300000, guid: 6e72ceb20aa00224d8e898d3da8dc946, type: 3}
 --- !u!95 &3071729661021759993
@@ -380,7 +380,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f21b55420e114aa4b8da8b577d17ea55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
