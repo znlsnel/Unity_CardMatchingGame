@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card_I : MonoBehaviour
 {
     public int index = 0;
     public SpriteRenderer frontImage;
@@ -19,14 +19,14 @@ public class Card : MonoBehaviour
     {
             anim.SetBool("isOpen", true);
         
-        if (GameManager.Instance.firstCard == null)
+        if (GameManager_I.Instance.firstCard == null)
         {
-            GameManager.Instance.firstCard = this;
+            GameManager_I.Instance.firstCard = this;
         }
         else
         {
-            GameManager.Instance.secondCard = this;
-            GameManager.Instance.isMatched();
+            GameManager_I.Instance.secondCard = this;
+            GameManager_I.Instance.isMatched();
         }
     }
 

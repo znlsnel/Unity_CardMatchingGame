@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager_I : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager_I Instance;
     public Text timeTxt;
     private float timer = 0.0f;
 
-    public Card firstCard;
-    public Card secondCard;
+    public Card_I firstCard;
+    public Card_I secondCard;
     public GameObject endTxt;
 
     public int cardCount = 0;
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     }
 
     // 카드가 클릭될 때 호출될 메서드
-    public void CardRevealed(Card card)
+    public void CardRevealed(Card_I card)
     {
         // 첫 번째 카드 클릭 시
         if (firstCard == null)

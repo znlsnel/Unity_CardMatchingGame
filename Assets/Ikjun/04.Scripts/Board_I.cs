@@ -4,7 +4,7 @@ using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using System.Linq;
 
-public class Board : MonoBehaviour
+public class Board_I : MonoBehaviour
 {
     public Transform board;
     public GameObject card;
@@ -24,10 +24,10 @@ public class Board : MonoBehaviour
             
             GameObject go = Instantiate(card);
             go.transform.SetParent(board, false);
-            go.GetComponent<Card>().Setting(arr[i]);
+            go.GetComponent<Card_I>().Setting(arr[i]);
 
         }
-        GameManager.Instance.cardCount = arr.Length;
+        GameManager_I.Instance.cardCount = arr.Length;
     }
 
 }
