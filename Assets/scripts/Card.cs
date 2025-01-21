@@ -5,23 +5,23 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-        [NonSerialized] public int idx = 0;    // Board에서 대입할 인덱스
+    [NonSerialized] public int idx = 0;    // Board에서 대입할 인덱스
 
-	[SerializeField] GameObject front;    // Front
-	[SerializeField] GameObject back;     // Front
-	[SerializeField] string imagePath;
-	[SerializeField] SpriteRenderer frontImage;   // Front에 들어있는 SpriteRenderer
+    [SerializeField] GameObject front;    // Front
+    [SerializeField] GameObject back;     // Front
+    [SerializeField] string imagePath;
+    [SerializeField] SpriteRenderer frontImage;   // Front에 들어있는 SpriteRenderer
 
-	AudioSource audioSource;
-        Animator anim;
+    AudioSource audioSource;
+    Animator anim;
 
-        public AudioClip audioclip;
+    public AudioClip audioclip;
 
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-		anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -33,10 +33,6 @@ public class Card : MonoBehaviour
         idx = number;
         // 불러온 카드를 front에 대입한다
         frontImage.sprite = Resources.Load<Sprite>($"{imagePath}/image_{idx}");
-    }
-    public void SettingCard(int number)
-    {
-
     }
 
     public void OpenCard()

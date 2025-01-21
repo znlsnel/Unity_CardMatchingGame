@@ -39,8 +39,8 @@ public class RetryButton : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-        public void BackToTitle()
-        {
-                SceneManager.LoadScene(scenes[0]);
-        }
+    public void BackToTitle()
+    {
+        SceneManager.LoadScene(scenes[0]);
+    }
 }
