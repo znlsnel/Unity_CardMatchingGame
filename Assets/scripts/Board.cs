@@ -21,11 +21,14 @@ public class Board : MonoBehaviour
 
         for (int i = 0; i < 16; i++)
         {
-            
             GameObject go = Instantiate(card);
             go.transform.SetParent(board, false);
-            go.GetComponent<Card>().Setting(arr[i]);
 
+	float x = (i % 4) * 1.4f - 2.1f;
+	float y = (i / 4) * 1.6f - 3.0f;
+	go.transform.position = new Vector2(x, y);
+
+	go.GetComponent<Card>().Setting(arr[i]); 
         }
         GameManager.Instance.cardCount = arr.Length;
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject producer; // 해당 스테이지 제작자의 정보(이름 Text, Image, 설명 Text)
 
     // 카드 2개의 정보를 가지고 있어야 한다
-    public Card firstCard;
-    public Card secondCard;
+        [NonSerialized] public Card firstCard; 
+        [NonSerialized] public Card secondCard;
 
     public Text timeTxt;
     public GameObject clearText;    // 클리어(성공메세지)

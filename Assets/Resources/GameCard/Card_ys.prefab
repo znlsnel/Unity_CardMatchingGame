@@ -209,15 +209,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7497233251267690774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa489a5a1a7d7e0478435a7cc0652352, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b22246ffd3a5154c84b635cfd708e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idx: 0
-  frontImage: {fileID: 7951783989004281739}
   front: {fileID: 5757218307948136873}
   back: {fileID: 9119987189938441394}
-  anim: {fileID: 0}
-  clip: {fileID: 8300000, guid: 6e72ceb20aa00224d8e898d3da8dc946, type: 3}
+  imagePath: Images/Image_youngsong
+  frontImage: {fileID: 7951783989004281739}
+  audioclip: {fileID: 8300000, guid: 6e72ceb20aa00224d8e898d3da8dc946, type: 3}
 --- !u!95 &8134866475254564774
 Animator:
   serializedVersion: 5
@@ -567,12 +566,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c7bf45f0ef95bed4491c5809fc6bf484, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f21b55420e114aa4b8da8b577d17ea55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.965, y: 1.439}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

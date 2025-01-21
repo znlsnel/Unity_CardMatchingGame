@@ -1,25 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public int idx = 0;    // Board에서 대입할 인덱스
+        [NonSerialized] public int idx = 0;    // Board에서 대입할 인덱스
 
-    public GameObject front;    // Front
-    public GameObject back;     // Front
-    public Animator anim;
+	[SerializeField] GameObject front;    // Front
+	[SerializeField] GameObject back;     // Front
+	[SerializeField] string imagePath;
+	[SerializeField] SpriteRenderer frontImage;   // Front에 들어있는 SpriteRenderer
 
-    AudioSource audioSource;
+	AudioSource audioSource;
+        Animator anim;
 
-    public AudioClip clip;
-    public SpriteRenderer frontImage;   // Front에 들어있는 SpriteRenderer
+        public AudioClip audioclip;
 
-        [SerializeField] string imagePath;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+		anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,7 +32,7 @@ public class Card : MonoBehaviour
     {
         idx = number;
         // 불러온 카드를 front에 대입한다
-        frontImage.sprite = Resources.Load<Sprite>($"imagePath_image{idx}");
+        frontImage.sprite = Resources.Load<Sprite>($"{imagePath}/image_{idx}");
     }
     public void SettingCard(int number)
     {
@@ -41,7 +43,7 @@ public class Card : MonoBehaviour
     {
         if (GameManager.Instance.secondCard != null) return;
 
-        audioSource.PlayOneShot(clip);  // AudioClip끼리 겹치지 않는다
+        audioSource.PlayOneShot(audioclip);  // AudioClip끼리 겹치지 않는다
         anim.SetBool("isOpen", true);   // CardFlip 애니메이션으로 바꾼다
         front.SetActive(true);
         back.SetActive(false);

@@ -184,12 +184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b22246ffd3a5154c84b635cfd708e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idx: 0
   front: {fileID: 6893553046212005752}
   back: {fileID: 5284987852997390355}
-  anim: {fileID: 3071729661021759993}
-  clip: {fileID: 8300000, guid: dfb39b1e8cbfb5343b5253bca97fccb7, type: 3}
+  imagePath: Images/Image_youngsong
   frontImage: {fileID: 5106066671657115577}
+  audioclip: {fileID: 8300000, guid: 6e72ceb20aa00224d8e898d3da8dc946, type: 3}
 --- !u!95 &3071729661021759993
 Animator:
   serializedVersion: 5
@@ -200,7 +199,7 @@ Animator:
   m_GameObject: {fileID: 5276096928587288717}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf5ecda0976e7d948a47a7151bfa2eb3, type: 2}
+  m_Controller: {fileID: 9100000, guid: a0feb4c5a35d98e4b991d3509eb45ae8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -473,7 +472,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &9007235935580586596

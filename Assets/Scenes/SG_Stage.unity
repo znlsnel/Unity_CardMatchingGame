@@ -164,13 +164,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 67827437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d1d98b5bf39ae4982f64505fd234df, type: 3}
+  m_Script: {fileID: 11500000, guid: 4183030d3c4c39540a5ff8e297b17b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  board: {fileID: 67827438}
   card: {fileID: 5276096928587288717, guid: de035bec30ecb1c44b8ec42bdca646c9, type: 3}
-  spriteList:
-  - {fileID: 1984645136, guid: 3d6666346d2e2fa4894c7e2716410906, type: 3}
-  - {fileID: 1897214238, guid: 3d6666346d2e2fa4894c7e2716410906, type: 3}
+  idx: 0
+  cardCount: 0
 --- !u!1 &120837592
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,12 +202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   producer: {fileID: 984514577}
-  firstCard: {fileID: 0}
-  secondCard: {fileID: 0}
   timeTxt: {fileID: 913673911}
   clearText: {fileID: 876316417}
   endTxt: {fileID: 187348685}
-  clip: {fileID: 8300000, guid: 3cae6b276427e5d4eafcafc414dc8122, type: 3}
+  clip: {fileID: 8300000, guid: a5e230fa3fab9124b90e83d232412de6, type: 3}
   cardCount: 0
 --- !u!4 &120837594
 Transform:
@@ -1425,10 +1423,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2760557805632990706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d10ecd1f2f1114188d44fca24cc60e, type: 3}
+  m_Script: {fileID: 11500000, guid: c1070a08187bcae4cac51e853d6fb464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 63da60ce5dc08bd448cbe9503ac131e7, type: 3}
+  audioSource: {fileID: 4355389363666889151}
+  clip: {fileID: 8300000, guid: 6365da3d0e3643a4488a1ea0e1869847, type: 3}
 --- !u!82 &4355389363666889151
 AudioSource:
   m_ObjectHideFlags: 0
