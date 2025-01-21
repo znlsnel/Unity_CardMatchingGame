@@ -5,21 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/YS_MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: ef887f18788d6e8489ef77555746f1e3
   - enabled: 1
+    path: Assets/Scenes/SelectScene.unity
+    guid: 873fd615cef4ce84395d4aa83f7e7e31
+  - enabled: 1
+    path: Assets/Scenes/IJ_CardGame.unity
+    guid: 5c2601c1b00b242c08fecde79c27e424
+  - enabled: 1
     path: Assets/Scenes/SG_Stage.unity
     guid: c058c176097229849a701b609476e8f6
-  - enabled: 0
-    path: Assets/Seonggyun/Scenes/Stage2.unity
-    guid: a4275c0165c7bc0479a69a1fc23f8521
-  - enabled: 0
-    path: Assets/Seonggyun/Scenes/Stage3.unity
-    guid: 5df7071fbb313014bb96d9b335b0a28a
+  - enabled: 1
+    path: Assets/Scenes/YS_MainScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SuccessScene.unity
+    guid: db32d8c2d2d82ad488c7964e26bbf982
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 2f41bd764c6452040ad379ea2cef5c22
