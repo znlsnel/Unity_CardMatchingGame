@@ -42,12 +42,4 @@ public class RetryButton : MonoBehaviour
     {
         SceneManager.LoadScene(scenes[0]);
     }
-    // 스테이지 제작자 정보 보여주기
-    public void ShowProducer()
-    {        
-        GameManager.Instance.producer.SetActive(true);
-        //GameManager.Instance.producerName.SetActive(true);
-        //GameManager.Instance.producerImage.SetActive(true);
-        //GameManager.Instance.demonstration.SetActive(true);
-    }
 }

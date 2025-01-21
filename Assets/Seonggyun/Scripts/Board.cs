@@ -7,6 +7,13 @@ public class Board : MonoBehaviour
 {
     public GameObject card; // card 프리팹
 
+    // Board를 매니저처럼 사용
+    // 카드 프리팹들의 정보를 가지고 있다
+    public List<Sprite> spriteList;   // 카드를 미리 리스트에 추가한다
+    private void Awake()
+    {
+        spriteList = new List<Sprite>();
+    }
     void Start()
     {
         int[] arr = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };

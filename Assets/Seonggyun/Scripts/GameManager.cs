@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
 
                 // 각각 스테이지를 하나씩 만들고, 스테이지를 만든 제작자의 정보를 보여주는 식으로 하면 좋을 듯
                 Invoke("ShowProducerInvoke", 1.0f); // 1초 후에 제작자 정보 보여주기
+                // 하지만 현재 진입을 안한다
 
                 // endTxt의 위치를 조금 바꾸자
                 //endTxt.SetActive(true);
@@ -88,6 +89,7 @@ public class GameManager : MonoBehaviour
     // 스테이지 제작자 정보 보여주기
     public void ShowProducerInvoke()
     {
+        // 진입을 안한다?
         clearText.SetActive(false);
         producer.SetActive(true);
     }

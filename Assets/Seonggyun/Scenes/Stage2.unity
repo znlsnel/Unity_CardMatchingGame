@@ -199,13 +199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   producer: {fileID: 984514577}
-  producerName: {fileID: 0}
-  demonstration: {fileID: 0}
-  producerImage: {fileID: 0}
   firstCard: {fileID: 0}
   secondCard: {fileID: 0}
   timeTxt: {fileID: 913673911}
-  clearText: {fileID: 0}
+  clearText: {fileID: 876316417}
   endTxt: {fileID: 187348685}
   clip: {fileID: 8300000, guid: 3cae6b276427e5d4eafcafc414dc8122, type: 3}
   cardCount: 0
@@ -813,7 +810,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &876316418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1074,7 +1071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &984514578
 Transform:
   m_ObjectHideFlags: 0

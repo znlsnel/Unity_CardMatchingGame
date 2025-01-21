@@ -31,6 +31,11 @@ public class Cardd : MonoBehaviour
         // 불러온 카드를 front에 대입한다
         frontImage.sprite = Resources.Load<Sprite>($"rtan{idx}");
     }
+    public void SettingCard(int number)
+    {
+
+    }
+
     public void OpenCard()
     {
         if (GameManager.Instance.secondCard != null) return;
