@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 45545677}
   - component: {fileID: 45545676}
   - component: {fileID: 45545678}
-  - component: {fileID: 45545679}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -210,7 +209,7 @@ Animator:
   m_GameObject: {fileID: 45545674}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 846e5f2fc11744748a2c06e75fcb88c9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a82bcd88035a9f4989f405b1a711aee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -221,20 +220,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &45545679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45545674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e4c2519715f1e45a92583276ac2f9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageId: 0
-  anim: {fileID: 0}
 --- !u!1 &104925631
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,10 +344,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 402592218}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+      - m_Target: {fileID: 855584710}
+        m_TargetAssemblyTypeName: HiddenStage, Assembly-CSharp
         m_MethodName: GoToStage
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -404,8 +389,11 @@ MonoBehaviour:
   producer: {fileID: 984514577}
   timeTxt: {fileID: 913673911}
   endTxt: {fileID: 187348685}
-  clip: {fileID: 8300000, guid: a5e230fa3fab9124b90e83d232412de6, type: 3}
+  matchAudio: {fileID: 0}
+  successAudio: {fileID: 0}
+  failureAudio: {fileID: 0}
   cardCount: 0
+  isClear: 0
 --- !u!4 &120837594
 Transform:
   m_ObjectHideFlags: 0
@@ -879,15 +867,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be13b9bd9d88c6a4da425fb7396ada20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes: []
-  stages:
-  - {fileID: 1032668892}
-  - {fileID: 792392145}
-  - {fileID: 1663710315}
-  - {fileID: 855584706}
-  stage2_back: {fileID: 45545679}
-  stage3_back: {fileID: 849299731}
-  isStageClear: 
+  startScene: {fileID: 102900000, guid: ef887f18788d6e8489ef77555746f1e3, type: 3}
+  selectScene: {fileID: 102900000, guid: 873fd615cef4ce84395d4aa83f7e7e31, type: 3}
+  successScene: {fileID: 102900000, guid: db32d8c2d2d82ad488c7964e26bbf982, type: 3}
+  stageList:
+  - {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
+  - {fileID: 102900000, guid: c058c176097229849a701b609476e8f6, type: 3}
+  - {fileID: 102900000, guid: 5c2601c1b00b242c08fecde79c27e424, type: 3}
+  - {fileID: 102900000, guid: db32d8c2d2d82ad488c7964e26bbf982, type: 3}
+  isNormalStageClear: 
+  isStageOpened: 
   isHiddenStageOn: 0
 --- !u!1 &519420028
 GameObject:
@@ -1281,6 +1270,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 792392146}
+  - component: {fileID: 792392147}
+  - component: {fileID: 792392148}
   m_Layer: 0
   m_Name: Stage2
   m_TagString: Untagged
@@ -1305,6 +1296,43 @@ Transform:
   - {fileID: 45545675}
   m_Father: {fileID: 920863656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &792392147
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792392145}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d425a903507c384f8566a62f953df58, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &792392148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792392145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e4c2519715f1e45a92583276ac2f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageId: 1
+  anim: {fileID: 0}
+  front: {fileID: 0}
+  back: {fileID: 0}
 --- !u!1 &849299726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,8 +1344,6 @@ GameObject:
   - component: {fileID: 849299727}
   - component: {fileID: 849299729}
   - component: {fileID: 849299728}
-  - component: {fileID: 849299730}
-  - component: {fileID: 849299731}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1382,41 +1408,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849299726}
   m_CullTransparentMesh: 1
---- !u!95 &849299730
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849299726}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 846e5f2fc11744748a2c06e75fcb88c9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &849299731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849299726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e4c2519715f1e45a92583276ac2f9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stageId: 0
-  anim: {fileID: 0}
 --- !u!1 &855584706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,11 +1494,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 855584706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6e4c2519715f1e45a92583276ac2f9d, type: 3}
+  m_Script: {fileID: 11500000, guid: a11a0dae441983d49bc1612eb084a8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageId: 4
-  anim: {fileID: 0}
+  stageId: 0
+  front: {fileID: 0}
 --- !u!1 &876316417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1032668893}
+  - component: {fileID: 1032668894}
   m_Layer: 0
   m_Name: Stage1
   m_TagString: Untagged
@@ -1842,6 +1834,20 @@ Transform:
   - {fileID: 1748324294}
   m_Father: {fileID: 920863656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032668894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032668892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44748ef2c11196644944240d4b8660a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageId: 0
+  front: {fileID: 0}
 --- !u!1 &1085455839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,10 +1972,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 402592218}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+      - m_Target: {fileID: 1663710317}
+        m_TargetAssemblyTypeName: StageLock, Assembly-CSharp
         m_MethodName: GoToStage
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2102,10 +2108,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 402592218}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+      - m_Target: {fileID: 1032668894}
+        m_TargetAssemblyTypeName: Stage1, Assembly-CSharp
         m_MethodName: GoToStage
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2198,6 +2204,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1663710316}
+  - component: {fileID: 1663710318}
+  - component: {fileID: 1663710317}
   m_Layer: 0
   m_Name: Stage3
   m_TagString: Untagged
@@ -2222,6 +2230,43 @@ Transform:
   - {fileID: 849299727}
   m_Father: {fileID: 920863656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1663710317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663710315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e4c2519715f1e45a92583276ac2f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageId: 2
+  anim: {fileID: 0}
+  front: {fileID: 0}
+  back: {fileID: 0}
+--- !u!95 &1663710318
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663710315}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a03dc86f442b2b64983b7beb94af3715, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1748324293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,10 +2682,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 402592218}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+      - m_Target: {fileID: 792392148}
+        m_TargetAssemblyTypeName: StageLock, Assembly-CSharp
         m_MethodName: GoToStage
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

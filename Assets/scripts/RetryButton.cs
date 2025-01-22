@@ -16,12 +16,11 @@ public class RetryButton : MonoBehaviour
 
     public void BackToTitle()
     {
-
-        SceneManager.LoadScene(StageManager.Instance.scenes[0]);
+        //SceneManager.LoadScene(StageManager.Instance.startScene);
     }
     // Stage선택창으로 돌아가는 UI를 클릭할 때 호출되는 메서드
     public void BackToSelectScene()
     {
-        SceneManager.LoadScene(StageManager.Instance.scenes[1]);
+        //SceneManager.LoadScene(StageManager.Instance.scenes[1]);
     }
 }
