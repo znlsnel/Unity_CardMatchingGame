@@ -17,23 +17,34 @@ public class Card : MonoBehaviour
 
     public AudioClip audioclip;
 
+        Vector3 cardPosition;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
-        anim.SetBool("isOpen", true);//시작시 모든카드 앞면
-        Invoke("CloseCard", 1f);
     }
    
-   
-    
-    public void Setting(int number)
-    {
-        idx = number;
-        // �ҷ��� ī�带 front�� �����Ѵ�
-        frontImage.sprite = Resources.Load<Sprite>($"{imagePath}/image_{idx}");
-    }
+	private void Update() 
+	{
+                Vector3 dir = (cardPosition - gameObject.transform.position);
+                if (dir.magnitude > 0.1f)
+			gameObject.transform.position += dir.normalized * 10.0f * Time.deltaTime;
+		
+	} 
+
+	public void Setting(int number, Vector2 pos)
+        {
+                cardPosition = pos;
+                idx = number;
+		frontImage.sprite = Resources.Load<Sprite>($"{imagePath}/image_{idx}");
+        }
+
+        public void StartCard()
+        {
+		anim.SetBool("isOpen", true);//시작시 모든카드 앞면
+		Invoke("CloseCard", 1f);
+	}
 
     public void OpenCard()
     {

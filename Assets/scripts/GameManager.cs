@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     float time = 0.0f;
 
     public bool isClear = false;
+        bool isStart = false;
     private void Awake()
     {
         if (Instance == null)
@@ -37,14 +38,23 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+                
         isClear = false;
+        isStart = false;
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
-    }
+	timeTxt.text = time.ToString("N2");
+                 
+	}
+
+	public void StartTimer()
+        {
+                isStart = true; 
+	}
 
     void Update()
     {
-        if (isClear)
+        if (isClear || isStart == false)
             return;
 
         if (time < 30.0f)
@@ -69,9 +79,6 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.idx == secondCard.idx)
         {
-            // ����
-            // �̶� ���⼭ �ٷ� Destroy�� ȣ������ �ʰ�, Card Ŭ�������� ���� �����Լ��� ����Ѵ�
-            // ��Ȱ��ȭ�� ī��� cardPool�� �߰�
             audioSource.PlayOneShot(matchAudio);
 
             firstCard.DestroyCard();
@@ -81,41 +88,28 @@ public class GameManager : MonoBehaviour
             if (cardCount == 0)
             {
                 isClear = true;
-                // StageClear �޼��� ȣ��
                 AudioManager.Instance.StopAudio();
                 audioSource.PlayOneShot(successAudio);
 
-                // Stage1은 isNormalStageClear[0]이고, buildIndex가 3이다
-                // 3을 빼고 전달한다
                 int index = SceneManager.GetActiveScene().buildIndex;
                 StageManager.Instance.ClearStage(index - 3);
 
-                // ���� ���������� �ϳ��� �����, ���������� ���� �������� ������ �����ִ� ������ �ϸ� ���� ��
-                Invoke("ShowProducerInvoke", 1.0f); // 1�� �Ŀ� ������ ���� �����ֱ�
-                // ������ ���� ������ ���Ѵ�
+                Invoke("ShowProducerInvoke", 1.0f); 
 
-                // endTxt�� ��ġ�� ���� �ٲ���
-                //endTxt.SetActive(true);
 
-                ///
             }
         }
         else
         {
-            // �ٽ� �������
-            // �̶� ���⼭ �ٷ� Ȱ��ȭ, ��Ȱ��ȭ���� �ʰ�, Card Ŭ�������� ���� �������Լ��� ����Ѵ�
             firstCard.CloseCard();
             secondCard.CloseCard();
         }
-        // ������ �Ǿ��� �������� ���� firstCard, secondCard�� �������Ѵ�
         firstCard = null;
         secondCard = null;
     }
 
-    // �������� ������ ���� �����ֱ�
     public void ShowProducerInvoke()
     {
-        // ������ ���Ѵ�?
 
         producer.SetActive(true);
     }

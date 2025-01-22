@@ -33,31 +33,44 @@ public class Board : MonoBehaviour
 
         arr = arr.OrderBy(x => Random.Range(0f, arr.Length)).ToArray();
 
-        for (int i = 0; i < arr.Length; i++)
-        {
-            GameObject go = Instantiate(card);
-            go.transform.SetParent(board, false);
-
-            float x = (i % 4) * 1.4f - 2.1f;
-            if (cardNum == CardNumber.Hard) //난이도 별 카드 간격 조정 
-            {
-                float y = (i / 4) * 1.5f - 4.0f;
-                go.transform.position = new Vector2(x, y);
-
-            } else if(cardNum == CardNumber.easy)
-            {
-                float y = (i / 4) * 1.6f - 2.5f;
-                go.transform.position = new Vector2(x, y);
-            } else
-            {
-                float y = (i / 4) * 1.6f - 3.0f;
-                go.transform.position = new Vector2(x, y);
-            }
-            
-
-            go.GetComponent<Card>().Setting(arr[i]);
-        }
-
-        GameManager.Instance.cardCount = arr.Length;
+	StartCoroutine(SpawnCard(arr));
     }
+
+
+        IEnumerator SpawnCard(int[] arr)
+        {
+		List<Card> cards = new List<Card>();
+		for (int i = 0; i < arr.Length; i++)
+		{
+			GameObject go = Instantiate(card);
+			go.transform.SetParent(board, false);
+
+			float x = (i % 4) * 1.4f - 2.1f;
+			float y = (i / 4) * 1.5f - 4.0f;
+
+			if (cardNum == CardNumber.easy)
+				y = (i / 4) * 1.6f - 2.5f;
+
+			else if (cardNum == CardNumber.normal)
+				y = (i / 4) * 1.6f - 3.0f;
+
+			Card cd = go.GetComponent<Card>();
+			cards.Add(cd);
+
+			go.transform.position = new Vector2(0, -5);
+			go.GetComponent<Card>().Setting(arr[i], new Vector2(x, y));
+
+			yield return new WaitForSeconds(0.1f);
+		}
+
+		yield return new WaitForSeconds(0.5f);
+		foreach (Card cd in cards)
+			cd.StartCard();  
+
+		
+		GameManager.Instance.cardCount = arr.Length;
+
+		yield return new WaitForSeconds(2.0f);
+		GameManager.Instance.StartTimer();
+	}
 }
