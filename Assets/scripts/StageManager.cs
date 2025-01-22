@@ -54,46 +54,6 @@ public class StageManager : MonoBehaviour
             }
         }
         isHiddenStageOn = false;
-
-        /// 아래의 내용은 필요할까? 다른곳에서 StageManager에 접근하여 변수만 바꿀것이므로 필요하지 않은듯
-        // 다음에 호출될 때 호출할 메서드를 구독한다
-        // 해제하지 않는 한, SelectScene이 로드될 때 계속 이 메서드를 호출한다
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-    // SelectScene 씬이 로드될 때 호출
-    // UI를 띄운 다음 SelectScene으로 돌아오게 해야 테스트가 가능할 듯 하다
-    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        ActiveSceneUI();
-    }
-    public void ActiveSceneUI()
-    {
-        // bool변수값을 비교하여, 1번만, 씬을 Active상태로 만든다
-        for (int i = 0; i <= stageCount; i++)
-        {
-            // i가 0이면 stage1을 알아보고 있는것이다
-            // stage1은 제약이 없기 때문에 i가 0일때는 진입하지 않는다
-            if ((i > 0) && (i < stageCount))
-            {
-                // i가 1이면 isStageClear배열에서는 stage2의 클리어 정보를 담고 있다
-                // stageBack리스트의 0번 인덱스에는 stage2의 뒷면이 들어가있으므로
-                // isStageClear배열의 i번 인덱스와 stageBack리스트의 i-1번 인덱스가 같은 stage를 비교하는 셈이다 
-                if (isNormalStageClear[i])
-                {
-                }
-                else
-                {
-                    return;
-                }
-            }
-            else // i == 3: 히든 스테이지
-            {
-                if (isHiddenStageOn)
-                {
-                    //stageFront[i].SetActive(true);
-                }
-            }
-        }
     }
     // stage를 클리어하면, 해당 stage의 isStageClear값을 true로 바꾼다
     public void ClearStage(int index)
