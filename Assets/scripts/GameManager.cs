@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
                 // endTxt�� ��ġ�� ���� �ٲ���
                 //endTxt.SetActive(true);
 
+                ///
             }
         }
         else
