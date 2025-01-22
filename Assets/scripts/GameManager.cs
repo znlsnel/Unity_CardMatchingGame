@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     public GameObject endTxt;       // 시간초과(실패메세지)
 
     AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip matchAudio;
+    public AudioClip successAudio;
+    public AudioClip failureAudio;
 
     public int cardCount = 0;      // 게임 씬에 남아있는 카드 개수
     float time = 0.0f;
@@ -48,14 +50,20 @@ public class GameManager : MonoBehaviour
         {
             time += Time.deltaTime;
             timeTxt.text = time.ToString("N2");
-        }
-        else
+
+                if (time >= 30.0f)
+		        audioSource.PlayOneShot(failureAudio);
+
+	}
+	else
         {
                 endTxt.SetActive(true);
                 AudioManager.Instance.StopAudio();
-                Time.timeScale = 0.0f;  // 정지 
-        }
-    }
+		Time.timeScale = 0.0f;  // 정지 
+                
+
+	}
+}
     public void Matched()
     {
         if (firstCard.idx == secondCard.idx)
@@ -63,7 +71,7 @@ public class GameManager : MonoBehaviour
             // 삭제
             // 이때 여기서 바로 Destroy를 호출하지 않고, Card 클래스에서 만든 삭제함수를 사용한다
             // 비활성화한 카드는 cardPool에 추가
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(matchAudio);
 
             firstCard.DestroyCard();
             secondCard.DestroyCard();
@@ -73,8 +81,8 @@ public class GameManager : MonoBehaviour
             {
                  isClear = true;
                                 // StageClear 메세지 호출
-                                AudioManager.Instance.StopAudio();
-
+                AudioManager.Instance.StopAudio();
+                                audioSource.PlayOneShot(successAudio);
 				// 각각 스테이지를 하나씩 만들고, 스테이지를 만든 제작자의 정보를 보여주는 식으로 하면 좋을 듯
 		Invoke("ShowProducerInvoke", 1.0f); // 1초 후에 제작자 정보 보여주기
                 // 하지만 현재 진입을 안한다

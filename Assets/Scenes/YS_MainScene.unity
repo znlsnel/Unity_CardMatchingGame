@@ -838,7 +838,9 @@ MonoBehaviour:
   producer: {fileID: 2119533038}
   timeTxt: {fileID: 1559687610}
   endTxt: {fileID: 1608377869}
-  clip: {fileID: 8300000, guid: a5e230fa3fab9124b90e83d232412de6, type: 3}
+  matchAudio: {fileID: 8300000, guid: a5e230fa3fab9124b90e83d232412de6, type: 3}
+  successAudio: {fileID: 8300000, guid: e55d15b531bb2174292d0610a8fb2a4c, type: 3}
+  failureAudio: {fileID: 8300000, guid: 7fe43ffc09d6a8c4ea1ee75a24e72b97, type: 3}
   cardCount: 0
   isClear: 0
 --- !u!4 &2103296028

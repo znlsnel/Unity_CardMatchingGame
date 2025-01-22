@@ -171,8 +171,11 @@ MonoBehaviour:
   producer: {fileID: 5709577767463871910, guid: 82ec696552c5a47d3a1c0cd9fd262475, type: 3}
   timeTxt: {fileID: 583969044}
   endTxt: {fileID: 1802032896}
-  clip: {fileID: 8300000, guid: a5e230fa3fab9124b90e83d232412de6, type: 3}
+  matchAudio: {fileID: 8300000, guid: a5e230fa3fab9124b90e83d232412de6, type: 3}
+  successAudio: {fileID: 8300000, guid: e55d15b531bb2174292d0610a8fb2a4c, type: 3}
+  failureAudio: {fileID: 8300000, guid: 7fe43ffc09d6a8c4ea1ee75a24e72b97, type: 3}
   cardCount: 0
+  isClear: 0
 --- !u!82 &286900185
 AudioSource:
   m_ObjectHideFlags: 0
