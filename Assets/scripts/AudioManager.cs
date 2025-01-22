@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class AudioManager : MonoBehaviour
 	public AudioSource audioSource;
 	public AudioClip clip;
 
+	float time = 0.0f;
 	private void Awake()
 	{
 		if (Instance == null)
@@ -25,9 +27,24 @@ public class AudioManager : MonoBehaviour
 		audioSource.Play();
 	}
 
+	private void Update()
+	{
+		time += Time.deltaTime;
+
+		if (time >= 10.0f)
+		{
+			UpPitch();
+			time = 0.0f;
+		}
+	}
+
 	public void UpPitch()
 	{
 		audioSource.pitch += 0.1f;
 	}
 
+	public void StopAudio()
+	{
+		audioSource.Stop();
+	}
 }

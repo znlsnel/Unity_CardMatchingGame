@@ -840,6 +840,7 @@ MonoBehaviour:
   endTxt: {fileID: 1608377869}
   clip: {fileID: 8300000, guid: a5e230fa3fab9124b90e83d232412de6, type: 3}
   cardCount: 0
+  isClear: 0
 --- !u!4 &2103296028
 Transform:
   m_ObjectHideFlags: 0
@@ -965,7 +966,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1732641310026510728, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7687861627846485676, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
       propertyPath: m_Pivot.x

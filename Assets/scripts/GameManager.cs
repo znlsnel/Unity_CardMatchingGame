@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour
 
     public int cardCount = 0;      // 게임 씬에 남아있는 카드 개수
     float time = 0.0f;
-
-        bool isClear = false;
+       
+        public bool isClear = false;
     private void Awake()
     {
         if (Instance == null)
@@ -41,8 +41,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-                if (isClear)
-                        return;
+        if (isClear)
+                return;
 
         if (time < 30.0f)
         {
@@ -51,8 +51,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            endTxt.SetActive(true);
-            Time.timeScale = 0.0f;  // 정지
+                endTxt.SetActive(true);
+                AudioManager.Instance.StopAudio();
+                Time.timeScale = 0.0f;  // 정지 
         }
     }
     public void Matched()
@@ -71,8 +72,8 @@ public class GameManager : MonoBehaviour
             if (cardCount == 0)
             {
                  isClear = true;
-		// StageClear 메세지 호출
-
+                                // StageClear 메세지 호출
+                                AudioManager.Instance.StopAudio();
 
 				// 각각 스테이지를 하나씩 만들고, 스테이지를 만든 제작자의 정보를 보여주는 식으로 하면 좋을 듯
 		Invoke("ShowProducerInvoke", 1.0f); // 1초 후에 제작자 정보 보여주기
