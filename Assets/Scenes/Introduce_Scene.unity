@@ -1226,9 +1226,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1897709391}
-  - {fileID: 1798688832}
   - {fileID: 282639339}
+  - {fileID: 1798688832}
+  - {fileID: 1897709391}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1767,6 +1767,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2a84bdee5ac8d8c4792879dd80c6c0b1, type: 3}
+    - target: {fileID: 4012223704295835483, guid: a6c7f43b51c884d79a9e8b720f5c2d47, type: 3}
+      propertyPath: m_Text
+      value: "\uAC8C\uC784\uACFC \uACE0\uC591\uC774\uB97C \uC88B\uC544\uD558\uB294
+        \uD3C9\uBC94\uD55C 20\uB300 \uCCAD\uB144\uC785\uB2C8\uB2E4.  \uB0B4\uBC30\uCEA0
+        \uAE30\uAC04\uB3D9\uC548 \uC5F4\uC2EC\uD788 \uCC38\uC5EC\uD574\uC11C \uD300\uC6D0\uB4E4\uACFC
+        \uC88B\uC740 \uACB0\uACFC \uB9CC\uB4E4\uACE0 \uC2F6\uC2B5\uB2C8\uB2E4! "
+      objectReference: {fileID: 0}
     - target: {fileID: 6037989065555072471, guid: a6c7f43b51c884d79a9e8b720f5c2d47, type: 3}
       propertyPath: m_Name
       value: IntroTxt

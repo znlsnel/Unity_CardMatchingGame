@@ -10,6 +10,7 @@ public class ProfilePanel : MonoBehaviour
 	[SerializeField] GameObject replayBtn;
 	[SerializeField] Text introduceText;
 	[SerializeField] List<AudioClip> _audioClips;
+
 	string itdText;
 	AudioSource audioSource;
 	private void Start()

@@ -707,12 +707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df876a384db0c2849bf97a7d2fcce333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scenes:
-  - StartScene
-  - Stage1
-  - Stage2
-  - Stage3
-  - EndScene
 --- !u!114 &1608377872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1732641310026510728, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7687861627846485676, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
       propertyPath: m_Pivot.x
