@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/YS_MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Introduce_Scene.unity
+    guid: 4f08a6c1d4cfd41a891a79298800368a
+  - enabled: 1
     path: Assets/Scenes/SuccessScene.unity
     guid: db32d8c2d2d82ad488c7964e26bbf982
   - enabled: 1
