@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [NonSerialized] public Card secondCard;
 
     public Text timeTxt;
-    public GameObject clearText;    // 클리어(성공메세지)
+
     public GameObject endTxt;       // 시간초과(실패메세지)
 
     AudioSource audioSource;
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int cardCount = 0;      // 게임 씬에 남아있는 카드 개수
     float time = 0.0f;
 
+        bool isClear = false;
     private void Awake()
     {
         if (Instance == null)
@@ -33,12 +34,16 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+                isClear = false;
         Time.timeScale = 1.0f;  // 재실행
         audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
+                if (isClear)
+                        return;
+
         if (time < 30.0f)
         {
             time += Time.deltaTime;
@@ -63,18 +68,19 @@ public class GameManager : MonoBehaviour
             secondCard.DestroyCard();
 
             cardCount -= 2;
-            if (cardCount == 0)
+            if (cardCount == 14)
             {
-                // StageClear 메세지 호출
-                clearText.SetActive(true);
+                 isClear = true;
+		// StageClear 메세지 호출
 
-                // 각각 스테이지를 하나씩 만들고, 스테이지를 만든 제작자의 정보를 보여주는 식으로 하면 좋을 듯
-                Invoke("ShowProducerInvoke", 1.0f); // 1초 후에 제작자 정보 보여주기
+
+				// 각각 스테이지를 하나씩 만들고, 스테이지를 만든 제작자의 정보를 보여주는 식으로 하면 좋을 듯
+		Invoke("ShowProducerInvoke", 1.0f); // 1초 후에 제작자 정보 보여주기
                 // 하지만 현재 진입을 안한다
 
                 // endTxt의 위치를 조금 바꾸자
                 //endTxt.SetActive(true);
-                Time.timeScale = 0.0f;  // 정지
+
             }
         }
         else
@@ -93,7 +99,7 @@ public class GameManager : MonoBehaviour
     public void ShowProducerInvoke()
     {
         // 진입을 안한다?
-        clearText.SetActive(false);
+
         producer.SetActive(true);
     }
 }
