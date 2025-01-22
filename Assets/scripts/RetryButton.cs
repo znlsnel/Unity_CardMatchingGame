@@ -9,18 +9,19 @@ public class RetryButton : MonoBehaviour
 {
     public void Retry()
     {
-        // �����ִ� ���� �ٽ� �����Ѵ�
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
 
     public void BackToTitle()
     {
-        //SceneManager.LoadScene(StageManager.Instance.startScene);
+        // 에디터로 연결하지 않고 만들어보자
+        // StageManager의 변수는 private이라 접근할 수 없다
+        // 그렇다면 빌드를 이용한다
+        SceneManager.LoadScene(0);  // buildIndex가 0: StartScene
     }
-    // Stage����â���� ���ư��� UI�� Ŭ���� �� ȣ��Ǵ� �޼���
     public void BackToSelectScene()
     {
-        //SceneManager.LoadScene(StageManager.Instance.scenes[1]);
+        SceneManager.LoadScene(1);  // buildIndex가 1: SelectScene
     }
 }

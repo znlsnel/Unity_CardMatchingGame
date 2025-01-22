@@ -12,12 +12,20 @@ public class HiddenStage : MonoBehaviour
     void Start()
     {
         front = transform.Find("Front");
+        OpenHidden();
     }
+    public void OpenHidden()
+    {
+        if (StageManager.Instance.isStageOpened[stageId])
+        {
+            gameObject.SetActive(true);
+        }
+    }
+
     // 클릭하면 실행되는 함수
     public void GoToStage()
     {
         Object tmpScene = StageManager.Instance.stageList[stageId];
         SceneManager.LoadScene(tmpScene.name);
     }
-
 }

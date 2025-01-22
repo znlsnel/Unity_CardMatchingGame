@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     float time = 0.0f;
 
     public bool isClear = false;
-        bool isStart = false;
+    bool isStart = false;
     private void Awake()
     {
         if (Instance == null)
@@ -38,19 +38,19 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-                
+
         isClear = false;
         isStart = false;
         Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
-	timeTxt.text = time.ToString("N2");
-                 
-	}
+        timeTxt.text = time.ToString("N2");
 
-	public void StartTimer()
-        {
-                isStart = true; 
-	}
+    }
+
+    public void StartTimer()
+    {
+        isStart = true;
+    }
 
     void Update()
     {
