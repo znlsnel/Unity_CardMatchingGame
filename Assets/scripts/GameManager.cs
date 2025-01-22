@@ -67,8 +67,8 @@ public class GameManager : MonoBehaviour
             firstCard.DestroyCard();
             secondCard.DestroyCard();
 
-            cardCount -= 2;
-            if (cardCount == 14)
+            cardCount -= 2; 
+            if (cardCount == 0)
             {
                  isClear = true;
 		// StageClear 메세지 호출

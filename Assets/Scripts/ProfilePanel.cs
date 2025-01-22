@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProfilePanel : MonoBehaviour
 {
 	[SerializeField] GameObject selectStageBtn;
 	[SerializeField] GameObject replayBtn;
-	[SerializeField] TextMeshProUGUI introduceText;
+	[SerializeField] Text introduceText;
 	[SerializeField] List<AudioClip> _audioClips;
 	string itdText;
 	AudioSource audioSource;
