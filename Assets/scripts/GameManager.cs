@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
                 // Stage1은 isNormalStageClear[0]이고, buildIndex가 3이다
                 // 3을 빼고 전달한다
                 int index = SceneManager.GetActiveScene().buildIndex;
-                StageManager.Instance.ClearStage(index - 3);
+                StageManager.Instance.ClearStage(index - 2);
 
                 // ���� ���������� �ϳ��� �����, ���������� ���� �������� ������ �����ִ� ������ �ϸ� ���� ��
                 Invoke("ShowProducerInvoke", 1.0f); // 1�� �Ŀ� ������ ���� �����ֱ�

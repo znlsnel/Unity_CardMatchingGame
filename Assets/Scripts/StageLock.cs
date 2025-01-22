@@ -25,10 +25,15 @@ public class StageLock : MonoBehaviour
         if (StageManager.Instance.isStageOpened[stageId])
         {
             anim.SetBool("isOpened", true);
-            back.gameObject.SetActive(false);
-            front.gameObject.SetActive(true);
         }
     }
+    // 애니메이션이 끝나면 이벤트 호출
+    public void OnAnimationComplete()
+    {
+        back.gameObject.SetActive(false);
+        front.gameObject.SetActive(true);
+    }
+
     // 클릭하면 실행되는 함수
     public void GoToStage()
     {
