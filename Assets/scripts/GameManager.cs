@@ -8,22 +8,22 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public GameObject producer; // ÇØ´ç ½ºÅ×ÀÌÁö Á¦ÀÛÀÚÀÇ Á¤º¸(ÀÌ¸§ Text, Image, ¼³¸í Text)
+    public GameObject producer;
 
-    // Ä«µå 2°³ÀÇ Á¤º¸¸¦ °¡Áö°í ÀÖ¾î¾ß ÇÑ´Ù
+    
     [NonSerialized] public Card firstCard;
     [NonSerialized] public Card secondCard;
 
     public Text timeTxt;
 
-    public GameObject endTxt;       // ½Ã°£ÃÊ°ú(½ÇÆÐ¸Þ¼¼Áö)
+    public GameObject endTxt;    
 
     AudioSource audioSource;
     public AudioClip matchAudio;
     public AudioClip successAudio;
     public AudioClip failureAudio;
 
-    public int cardCount = 0;      // °ÔÀÓ ¾À¿¡ ³²¾ÆÀÖ´Â Ä«µå °³¼ö
+    public int cardCount = 0;   
     float time = 0.0f;
        
         public bool isClear = false;
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
                 isClear = false;
-        Time.timeScale = 1.0f;  // Àç½ÇÇà
+        Time.timeScale = 1.0f; 
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         {
                 endTxt.SetActive(true);
                 AudioManager.Instance.StopAudio();
-		Time.timeScale = 0.0f;  // Á¤Áö 
+		Time.timeScale = 0.0f;  // ï¿½ï¿½ï¿½ï¿½ 
                 
 
 	}
@@ -68,9 +68,9 @@ public class GameManager : MonoBehaviour
     {
         if (firstCard.idx == secondCard.idx)
         {
-            // »èÁ¦
-            // ÀÌ¶§ ¿©±â¼­ ¹Ù·Î Destroy¸¦ È£ÃâÇÏÁö ¾Ê°í, Card Å¬·¡½º¿¡¼­ ¸¸µç »èÁ¦ÇÔ¼ö¸¦ »ç¿ëÇÑ´Ù
-            // ºñÈ°¼ºÈ­ÇÑ Ä«µå´Â cardPool¿¡ Ãß°¡
+            // ï¿½ï¿½ï¿½ï¿½
+            // ï¿½Ì¶ï¿½ ï¿½ï¿½ï¿½â¼­ ï¿½Ù·ï¿½ Destroyï¿½ï¿½ È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½, Card Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
+            // ï¿½ï¿½È°ï¿½ï¿½È­ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½ cardPoolï¿½ï¿½ ï¿½ß°ï¿½
             audioSource.PlayOneShot(matchAudio);
 
             firstCard.DestroyCard();
@@ -80,34 +80,34 @@ public class GameManager : MonoBehaviour
             if (cardCount == 0)
             {
                  isClear = true;
-                                // StageClear ¸Þ¼¼Áö È£Ãâ
+                                // StageClear ï¿½Þ¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½
                 AudioManager.Instance.StopAudio();
                                 audioSource.PlayOneShot(successAudio);
-				// °¢°¢ ½ºÅ×ÀÌÁö¸¦ ÇÏ³ª¾¿ ¸¸µé°í, ½ºÅ×ÀÌÁö¸¦ ¸¸µç Á¦ÀÛÀÚÀÇ Á¤º¸¸¦ º¸¿©ÁÖ´Â ½ÄÀ¸·Î ÇÏ¸é ÁÁÀ» µí
-		Invoke("ShowProducerInvoke", 1.0f); // 1ÃÊ ÈÄ¿¡ Á¦ÀÛÀÚ Á¤º¸ º¸¿©ÁÖ±â
-                // ÇÏÁö¸¸ ÇöÀç ÁøÀÔÀ» ¾ÈÇÑ´Ù
+				// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+		Invoke("ShowProducerInvoke", 1.0f); // 1ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½
 
-                // endTxtÀÇ À§Ä¡¸¦ Á¶±Ý ¹Ù²ÙÀÚ
+                // endTxtï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½
                 //endTxt.SetActive(true);
 
             }
         }
         else
         {
-            // ´Ù½Ã µÚÁý¾î¶ó
-            // ÀÌ¶§ ¿©±â¼­ ¹Ù·Î È°¼ºÈ­, ºñÈ°¼ºÈ­ÇÏÁö ¾Ê°í, Card Å¬·¡½º¿¡¼­ ¸¸µç µÚÁý±âÇÔ¼ö¸¦ »ç¿ëÇÑ´Ù
+            // ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            // ï¿½Ì¶ï¿½ ï¿½ï¿½ï¿½â¼­ ï¿½Ù·ï¿½ È°ï¿½ï¿½È­, ï¿½ï¿½È°ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½, Card Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
             firstCard.CloseCard();
             secondCard.CloseCard();
         }
-        // »èÁ¦°¡ µÇ¾úµç µÚÁý¾úµç °£¿¡ firstCard, secondCard´Â ºñ¿öÁà¾ßÇÑ´Ù
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ firstCard, secondCardï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
         firstCard = null;
         secondCard = null;
     }
 
-    // ½ºÅ×ÀÌÁö Á¦ÀÛÀÚ Á¤º¸ º¸¿©ÁÖ±â
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½
     public void ShowProducerInvoke()
     {
-        // ÁøÀÔÀ» ¾ÈÇÑ´Ù?
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½?
 
         producer.SetActive(true);
     }
