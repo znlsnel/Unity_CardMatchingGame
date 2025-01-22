@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -10,23 +11,23 @@ public class GameManager : MonoBehaviour
 
     public GameObject producer;
 
-    
+
     [NonSerialized] public Card firstCard;
     [NonSerialized] public Card secondCard;
 
     public Text timeTxt;
 
-    public GameObject endTxt;    
+    public GameObject endTxt;
 
     AudioSource audioSource;
     public AudioClip matchAudio;
     public AudioClip successAudio;
     public AudioClip failureAudio;
 
-    public int cardCount = 0;   
+    public int cardCount = 0;
     float time = 0.0f;
-       
-        public bool isClear = false;
+
+    public bool isClear = false;
     private void Awake()
     {
         if (Instance == null)
@@ -36,34 +37,34 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-                isClear = false;
-        Time.timeScale = 1.0f; 
+        isClear = false;
+        Time.timeScale = 1.0f;
         audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (isClear)
-                return;
+            return;
 
         if (time < 30.0f)
         {
             time += Time.deltaTime;
             timeTxt.text = time.ToString("N2");
 
-                if (time >= 30.0f)
-		        audioSource.PlayOneShot(failureAudio);
+            if (time >= 30.0f)
+                audioSource.PlayOneShot(failureAudio);
 
-	}
-	else
+        }
+        else
         {
-                endTxt.SetActive(true);
-                AudioManager.Instance.StopAudio();
-		Time.timeScale = 0.0f;  // ���� 
-                
+            endTxt.SetActive(true);
+            AudioManager.Instance.StopAudio();
+            Time.timeScale = 0.0f;  // ���� 
 
-	}
-}
+
+        }
+    }
     public void Matched()
     {
         if (firstCard.idx == secondCard.idx)
@@ -76,15 +77,21 @@ public class GameManager : MonoBehaviour
             firstCard.DestroyCard();
             secondCard.DestroyCard();
 
-            cardCount -= 2; 
+            cardCount -= 2;
             if (cardCount == 0)
             {
-                 isClear = true;
-                                // StageClear �޼��� ȣ��
+                isClear = true;
+                // StageClear �޼��� ȣ��
                 AudioManager.Instance.StopAudio();
-                                audioSource.PlayOneShot(successAudio);
-				// ���� ���������� �ϳ��� �����, ���������� ���� �������� ������ �����ִ� ������ �ϸ� ���� ��
-		Invoke("ShowProducerInvoke", 1.0f); // 1�� �Ŀ� ������ ���� �����ֱ�
+                audioSource.PlayOneShot(successAudio);
+
+                // Stage1은 isNormalStageClear[0]이고, buildIndex가 3이다
+                // 3을 빼고 전달한다
+                int index = SceneManager.GetActiveScene().buildIndex;
+                StageManager.Instance.ClearStage(index - 3);
+
+                // ���� ���������� �ϳ��� �����, ���������� ���� �������� ������ �����ִ� ������ �ϸ� ���� ��
+                Invoke("ShowProducerInvoke", 1.0f); // 1�� �Ŀ� ������ ���� �����ֱ�
                 // ������ ���� ������ ���Ѵ�
 
                 // endTxt�� ��ġ�� ���� �ٲ���
