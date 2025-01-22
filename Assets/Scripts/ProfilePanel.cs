@@ -35,7 +35,7 @@ public class ProfilePanel : MonoBehaviour
 			introduceText.text += itdText[i++];
 			audioSource.clip = _audioClips[Random.Range(0, _audioClips.Count)];
 			audioSource.Play();
-			yield return new WaitForSeconds(0.2f); 
+			yield return new WaitForSeconds(0.1f); 
 		}
 
 		selectStageBtn.SetActive(true);

@@ -9,7 +9,7 @@ public class RetryButton : MonoBehaviour
 {
     public void Retry()
     {
-        // ¿­·ÁÀÖ´Â ¾ÀÀ» ´Ù½Ã ½ÇÇàÇÑ´Ù
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
         string sceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(sceneName);
     }
@@ -18,7 +18,7 @@ public class RetryButton : MonoBehaviour
     {
         //SceneManager.LoadScene(StageManager.Instance.startScene);
     }
-    // Stage¼±ÅÃÃ¢À¸·Î µ¹¾Æ°¡´Â UI¸¦ Å¬¸¯ÇÒ ¶§ È£ÃâµÇ´Â ¸Þ¼­µå
+    // Stageï¿½ï¿½ï¿½ï¿½Ã¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ°ï¿½ï¿½ï¿½ UIï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È£ï¿½ï¿½Ç´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     public void BackToSelectScene()
     {
         //SceneManager.LoadScene(StageManager.Instance.scenes[1]);
