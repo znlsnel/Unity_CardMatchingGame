@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class IntroBtn : MonoBehaviour
 {
-    public string sceneName;
+    public Object scene;
 
     public void onClickIntroBtn()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(scene.name);
     }
 }
