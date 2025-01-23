@@ -229,6 +229,67 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1732641310026510728, guid: 6bae05a60fbddd24c89f76021a9162e2, type: 3}
   m_PrefabInstance: {fileID: 99722538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &171557255
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2316874448426405444, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_Name
+      value: BackgroundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372922943708005195, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: boardsc
+      value: 
+      objectReference: {fileID: 748858340}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194719758689151207, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 170b584a8408742798bd14fe31ea714b, type: 3}
 --- !u!1 &322922172
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +641,7 @@ MonoBehaviour:
   card: {fileID: 8883094874145810136, guid: 77d012aa6ebd4b045bfe6c0555b17599, type: 3}
   idx: 0
   cardCount: 0
-  cardNum: 8
+  cardNum: 10
 --- !u!1 &844939993
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +756,7 @@ GameObject:
   - component: {fileID: 1559687609}
   - component: {fileID: 1559687611}
   - component: {fileID: 1559687610}
+  - component: {fileID: 1559687612}
   m_Layer: 5
   m_Name: time Text
   m_TagString: Untagged
@@ -763,6 +825,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559687608}
   m_CullTransparentMesh: 1
+--- !u!114 &1559687612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559687608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
+  m_EffectDistance: {x: 1.5, y: -1.09}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1608377869
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +1027,7 @@ MonoBehaviour:
   failureAudio: {fileID: 8300000, guid: 7fe43ffc09d6a8c4ea1ee75a24e72b97, type: 3}
   cardCount: 0
   isClear: 0
+  isStart: 0
 --- !u!4 &2103296028
 Transform:
   m_ObjectHideFlags: 0
@@ -1072,3 +1150,4 @@ SceneRoots:
   - {fileID: 748858339}
   - {fileID: 708875289}
   - {fileID: 99722538}
+  - {fileID: 171557255}
