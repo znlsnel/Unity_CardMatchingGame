@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 2f41bd764c6452040ad379ea2cef5c22
+  - enabled: 1
+    path: Assets/Scenes/ruleScene.unity
+    guid: 2496987f673934ba39d816af0749f8ca
   m_configObjects: {}

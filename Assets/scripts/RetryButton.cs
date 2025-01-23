@@ -24,4 +24,8 @@ public class RetryButton : MonoBehaviour
     {
         SceneManager.LoadScene(1);  // buildIndex가 1: SelectScene
     }
+    public void onClickRule()
+    {
+        SceneManager.LoadScene(8);
+    }
 }
