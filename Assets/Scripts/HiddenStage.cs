@@ -16,6 +16,8 @@ public class HiddenStage : MonoBehaviour
     }
     public void OpenHidden()
     {
+        // 밋밋하니까 효과를 주고 싶다
+        // 애니메이션이 아닌 효과를 사용하고 연습해보자
         if (StageManager.Instance.isStageOpened[stageId])
         {
             front.gameObject.SetActive(true);

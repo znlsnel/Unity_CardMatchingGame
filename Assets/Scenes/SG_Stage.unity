@@ -1343,6 +1343,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2096569436112521272, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038280492955440378, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
+      propertyPath: m_Text
+      value: "\uC548\uB155\uD558\uC138\uC694 \uC800\uB294 \uC784\uC131\uADE0\uC785\uB2C8\uB2E4.
+        \uC88B\uC544\uD558\uB294 \uAC8C\uC784\uC740 \uB514\uC544\uBE14\uB85C \uC2DC\uB9AC\uC988,
+        \uC2A4\uD3EC\uCE20 \uAC8C\uC784\uC785\uB2C8\uB2E4. \uC798 \uBD80\uD0C1\uB4DC\uB9BD\uB2C8\uB2E4. "
+      objectReference: {fileID: 0}
     - target: {fileID: 6295740851841431351, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
       propertyPath: m_Name
       value: ProfileUI_SG
@@ -1350,6 +1360,10 @@ PrefabInstance:
     - target: {fileID: 6295740851841431351, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398253712431273280, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8753367313599754704, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
       propertyPath: m_Pivot.x

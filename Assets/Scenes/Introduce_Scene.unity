@@ -323,6 +323,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: feae4b621f77ebf4e9929f9f783a8696, type: 3}
+    - target: {fileID: 4012223704295835483, guid: a6c7f43b51c884d79a9e8b720f5c2d47, type: 3}
+      propertyPath: m_Text
+      value: "\uC548\uB155\uD558\uC138\uC694. \uACF5\uBD80\uC640 \uC2A4\uD3EC\uCE20\uB97C
+        \uC88B\uC544\uD558\uB294 30\uB300 \uCCAD\uB144\uC785\uB2C8\uB2E4. \uB0B4\uC77C\uBC30\uC6C0\uCEA0\uD504\uB97C
+        \uD1B5\uD574 \uB354 \uB9CE\uC774 \uBC30\uC6B0\uACE0, \uD300\uC6D0, \uB3D9\uAE30
+        \uC5EC\uB7EC\uBD84\uB4E4\uACFC \uD568\uAED8 \uAC1C\uBC1C\uC790\uB85C \uC131\uC7A5\uD574
+        \uB098\uAC00\uACE0 \uC2F6\uC2B5\uB2C8\uB2E4."
+      objectReference: {fileID: 0}
     - target: {fileID: 6037989065555072471, guid: a6c7f43b51c884d79a9e8b720f5c2d47, type: 3}
       propertyPath: m_Name
       value: IntroTxt
