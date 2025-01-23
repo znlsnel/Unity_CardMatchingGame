@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &104925632
 RectTransform:
   m_ObjectHideFlags: 0
@@ -297,6 +297,7 @@ MonoBehaviour:
   failureAudio: {fileID: 0}
   cardCount: 0
   isClear: 0
+  isStart: 0
 --- !u!4 &120837594
 Transform:
   m_ObjectHideFlags: 0
@@ -705,6 +706,7 @@ MonoBehaviour:
   isNormalStageClear: 
   isStageOpened: 
   isHiddenStageOn: 0
+  isUnLocked: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1144133955
 RectTransform:
   m_ObjectHideFlags: 0
