@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectScene.unity
     guid: 873fd615cef4ce84395d4aa83f7e7e31
   - enabled: 1
-    path: Assets/Scenes/YS_MainScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/SG_Stage.unity
     guid: c058c176097229849a701b609476e8f6
+  - enabled: 1
+    path: Assets/Scenes/YS_MainScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/IJ_CardGame.unity
     guid: 5c2601c1b00b242c08fecde79c27e424
