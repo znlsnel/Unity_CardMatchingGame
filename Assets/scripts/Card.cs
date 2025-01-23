@@ -48,27 +48,32 @@ public class Card : MonoBehaviour
 
     public void OpenCard()
     {
-        if (GameManager.Instance.secondCard != null) return;
+        if (GameManager.Instance.secondCard != null)
+            return;
 
-        audioSource.PlayOneShot(audioclip);  // AudioClip���� ��ġ�� �ʴ´�
-        anim.SetBool("isOpen", true);   // CardFlip �ִϸ��̼����� �ٲ۴�
-        //front.SetActive(true);
-        //back.SetActive(false);
-
-        // firstCard�� ����ٸ� 
-        if (GameManager.Instance.firstCard == null)
+        if (GameManager.Instance.isStart == true)
         {
-            // firstCard�� �� ������ �Ѱ��ش�
-            GameManager.Instance.firstCard = this;
-        }
-        // firstCard�� ������� �ʴٸ� 
-        else
-        {
-            // secondCard�� �� ������ �Ѱ��ش�
-            GameManager.Instance.secondCard = this;
+            audioSource.PlayOneShot(audioclip);  // AudioClip���� ��ġ�� �ʴ´�
+            anim.SetBool("isOpen", true);   // CardFlip �ִϸ��̼����� �ٲ۴�
+                                            //front.SetActive(true);
+                                            //back.SetActive(false);
 
-            // Matched�Լ��� ȣ���Ѵ�
-            GameManager.Instance.Matched();
+
+            // firstCard�� ����ٸ� 
+            if (GameManager.Instance.firstCard == null)
+            {
+                // firstCard�� �� ������ �Ѱ��ش�
+                GameManager.Instance.firstCard = this;
+            }
+            // firstCard�� ������� �ʴٸ� 
+            else
+            {
+                // secondCard�� �� ������ �Ѱ��ش�
+                GameManager.Instance.secondCard = this;
+
+                // Matched�Լ��� ȣ���Ѵ�
+                GameManager.Instance.Matched();
+            }
         }
     }
     public void DestroyCard()

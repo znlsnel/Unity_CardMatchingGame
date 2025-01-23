@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     float time = 0.0f;
 
     public bool isClear = false;
-    bool isStart = false;
+    public bool isStart = false;
     private void Awake()
     {
         if (Instance == null)
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
             secondCard.DestroyCard();
 
             cardCount -= 2;
-            if (cardCount == 14)
+            if (cardCount == 0)
             {
                 isClear = true;
                 AudioManager.Instance.StopAudio();

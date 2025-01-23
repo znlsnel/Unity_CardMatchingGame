@@ -15,7 +15,7 @@ public class StageManager : MonoBehaviour
     /// Scene은 저장하면 다른 씬이 로드되더라도 참조가 보전된다
     [SerializeField] Object startScene;
     [SerializeField] Object selectScene;
-    [SerializeField] Object introduceScene; // hidden
+    [SerializeField] Object successScene;
     public List<Object> stageList;  // 실제로 씬을 저장할 리스트
     // 각 stage의 clear 정보
     const int stageCount = 3;       // 3개의 노멀 스테이지가 존재
