@@ -556,8 +556,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 889004931}
-        m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
-        m_MethodName: GoToNextStage
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: OpenScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -629,9 +629,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 889004925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df876a384db0c2849bf97a7d2fcce333, type: 3}
+  m_Script: {fileID: 11500000, guid: f280d4c236d399e49a4965818f5c1385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScene: {fileID: 102900000, guid: 873fd615cef4ce84395d4aa83f7e7e31, type: 3}
 --- !u!1 &994438320
 GameObject:
   m_ObjectHideFlags: 0

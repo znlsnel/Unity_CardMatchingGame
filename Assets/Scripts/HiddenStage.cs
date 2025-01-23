@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Introduce씬을 HiddenScene으로 사용한다
 public class HiddenStage : MonoBehaviour
 {
     public int stageId;
