@@ -580,6 +580,7 @@ MonoBehaviour:
   card: {fileID: 8883094874145810136, guid: 77d012aa6ebd4b045bfe6c0555b17599, type: 3}
   idx: 0
   cardCount: 0
+  cardNum: 8
 --- !u!1 &844939993
 GameObject:
   m_ObjectHideFlags: 0

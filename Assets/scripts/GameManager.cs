@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
             secondCard.DestroyCard();
 
             cardCount -= 2;
-            if (cardCount == 0)
+            if (cardCount == 14)
             {
                 isClear = true;
                 AudioManager.Instance.StopAudio();
