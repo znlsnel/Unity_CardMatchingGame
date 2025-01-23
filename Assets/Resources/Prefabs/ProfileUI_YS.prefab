@@ -826,7 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9597633, g: 1, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -955,6 +955,7 @@ GameObject:
   - component: {fileID: 8934642772898668125}
   - component: {fileID: 3836270524390447809}
   - component: {fileID: 9177716985798506721}
+  - component: {fileID: 3981997557365686661}
   m_Layer: 5
   m_Name: introduce
   m_TagString: Untagged
@@ -1026,6 +1027,21 @@ MonoBehaviour:
     \uC88B\uC544\uD558\uB294 \uD3C9\uBC94\uD55C 20\uB300 \uCCAD\uB144\uC785\uB2C8\uB2E4.
     \uB0B4\uBC30\uCEA0 \uC5F4\uC2EC\uD788 \uCC38\uC5EC\uD574\uC11C \uC88B\uC740 \uACB0\uACFC
     \uB9CC\uB4E4\uACA0\uC2B5\uB2C8\uB2E4."
+--- !u!114 &3981997557365686661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124354538632383370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7565630219206380137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1053,7 @@ GameObject:
   - component: {fileID: 151031923853583819}
   - component: {fileID: 1679827813513228413}
   - component: {fileID: 3570791764520023253}
+  - component: {fileID: 2393187809533033641}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -1105,6 +1122,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uAE40\uC601\uC1A1"
+--- !u!114 &2393187809533033641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7565630219206380137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7596633576110821010
 GameObject:
   m_ObjectHideFlags: 0
