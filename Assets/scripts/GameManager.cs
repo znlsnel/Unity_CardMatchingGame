@@ -64,15 +64,12 @@ public class GameManager : MonoBehaviour
 
             if (time >= 30.0f)
                 audioSource.PlayOneShot(failureAudio);
-
         }
         else
         {
             endTxt.SetActive(true);
             AudioManager.Instance.StopAudio();
-            Time.timeScale = 0.0f;  // ���� 
-
-
+            Time.timeScale = 0.0f;
         }
     }
     public void Matched()
@@ -94,11 +91,7 @@ public class GameManager : MonoBehaviour
                 int index = SceneManager.GetActiveScene().buildIndex;
                 StageManager.Instance.ClearStage(index - 2);
 
-                // ���� ���������� �ϳ��� �����, ���������� ���� �������� ������ �����ִ� ������ �ϸ� ���� ��
-                Invoke("ShowProducerInvoke", 1.0f); // 1�� �Ŀ� ������ ���� �����ֱ�
-                                                    // ������ ���� ������ ���Ѵ�
-
-
+                Invoke("ShowProducerInvoke", 1.0f);
             }
         }
         else
@@ -112,7 +105,6 @@ public class GameManager : MonoBehaviour
 
     public void ShowProducerInvoke()
     {
-
         producer.SetActive(true);
     }
 }
