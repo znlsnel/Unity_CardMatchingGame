@@ -1269,6 +1269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProfileUI_SG
       objectReference: {fileID: 0}
+    - target: {fileID: 6295740851841431351, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8753367313599754704, guid: f02177e4d5e819d459a51d79c4d82cc7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
