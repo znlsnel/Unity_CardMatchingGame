@@ -468,6 +468,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &680098617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124354538632383370, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
+  m_PrefabInstance: {fileID: 1720348549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &680098621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680098617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.06795311, b: 1, a: 1}
+  m_EffectDistance: {x: 4, y: -2.11}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1019166290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,8 +1044,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7565630219206380137, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1747183634}
+    - targetCorrespondingSourceObject: {fileID: 7124354538632383370, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 680098621}
   m_SourcePrefab: {fileID: 100100000, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
+--- !u!1 &1747183630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7565630219206380137, guid: e1616d4799789d048b336d0a446c20ff, type: 3}
+  m_PrefabInstance: {fileID: 1720348549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1747183634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747183630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0.06795311, b: 1, a: 1}
+  m_EffectDistance: {x: 4, y: -2.11}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1994593290
 GameObject:
   m_ObjectHideFlags: 0
