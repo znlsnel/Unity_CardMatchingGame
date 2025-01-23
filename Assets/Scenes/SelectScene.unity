@@ -802,7 +802,7 @@ MonoBehaviour:
   - {fileID: 102900000, guid: c058c176097229849a701b609476e8f6, type: 3}
   - {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
   - {fileID: 102900000, guid: 5c2601c1b00b242c08fecde79c27e424, type: 3}
-  - {fileID: 102900000, guid: db32d8c2d2d82ad488c7964e26bbf982, type: 3}
+  - {fileID: 102900000, guid: 4f08a6c1d4cfd41a891a79298800368a, type: 3}
   isNormalStageClear: 
   isStageOpened: 
   isHiddenStageOn: 0
