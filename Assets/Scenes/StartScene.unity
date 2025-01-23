@@ -557,7 +557,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 889004931}
         m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
-        m_MethodName: GoToNextStage
+        m_MethodName: BackToSelectScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

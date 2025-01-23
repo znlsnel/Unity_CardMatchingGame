@@ -19,7 +19,7 @@ public class HiddenStage : MonoBehaviour
     {
         if (StageManager.Instance.isStageOpened[stageId])
         {
-            gameObject.SetActive(true);
+            front.gameObject.SetActive(true);
         }
     }
 

@@ -22,6 +22,8 @@ public class StageManager : MonoBehaviour
     public bool[] isNormalStageClear;     // 이건 스테이지 클리어를 한 표시이다
     public bool[] isStageOpened;    // StageLock은 이 변수를 기준으로 하는 것이 더 알아보기 쉽다
     public bool isHiddenStageOn;    // 히든 스테이지
+    public bool[] isUnLocked;         // 2,3의 자물쇠가 풀렸는가?
+
 
     private void Awake()
     {
@@ -52,6 +54,13 @@ public class StageManager : MonoBehaviour
             {
                 isStageOpened[i] = false;
             }
+        }
+        isUnLocked = new bool[stageCount + 1];
+        for (int i = 0; i < isUnLocked.Length; i++)
+        {
+            // 스테이지1과 히든스테이지의 경우 StageLock의 stageId와 인덱스를 맞추기 위해 추가
+            // StageLock의 UnLock이 실행된 후에 true로 갱신되어, 애니메이션의 중복 실행을 막는다
+            isUnLocked[i] = false;  
         }
         isHiddenStageOn = false;
     }
