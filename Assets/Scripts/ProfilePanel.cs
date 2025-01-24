@@ -22,6 +22,7 @@ public class ProfilePanel : MonoBehaviour
 		selectStageBtn.SetActive(false);
 		replayBtn.SetActive(false); 
 	}
+
 	public void AE_TypingText()
 	{
 		StartCoroutine(TypingText());

@@ -73,4 +73,7 @@ public class Board : MonoBehaviour
 		yield return new WaitForSeconds(2.0f);
 		GameManager.Instance.StartTimer();
 	}
+
+
+
 }

@@ -64,16 +64,12 @@ public class StageManager : MonoBehaviour
         isHiddenStageOn = false;
     }
     // stage를 클리어하면, 해당 stage의 isStageClear값을 true로 바꾼다
+
+
     public void ClearStage(int index)
     {
-        // Matched가 호출되고 있는 Scene의 정보를 가져온다
-        // 클리어한 후에 전달되므로 bool값을 그냥 true로 바꾸면 된다
-
-        // 노멀스테이지를 모두 클리어하지 않은 경우
-        if (!isNormalStageClear[index])
-        {
             isNormalStageClear[index] = true;
-            // 노멀스테이지를 모두 클리어한 경우
+
             if (index == stageCount)
             {
                 isHiddenStageOn = true;
@@ -81,12 +77,8 @@ public class StageManager : MonoBehaviour
             }
             else
             {
-                // stage1을 클리어했다면 2를 open해야한다
                 isStageOpened[index + 1] = true;
                 return;
             }
-        }
-        // 클리어한 경우 이미 true이다
-        return;
     }
 }

@@ -19,13 +19,10 @@ public class StageLock : MonoBehaviour
         UnLock();
     }
 
-    // StageManager가 bool이 true가 되면 호출한다. 1초정도 애니메이션을 진행하고
     public void UnLock()
     {
-        // 자물쇠 해제 애니메이션은 1회 실행한다
         if (!StageManager.Instance.isUnLocked[stageId])
         {
-            // StageManager로부터 열렸는지 확인한다
             if (StageManager.Instance.isStageOpened[stageId])
             {
                 anim.SetBool("isOpened", true);
@@ -37,6 +34,7 @@ public class StageLock : MonoBehaviour
             front.gameObject.SetActive(true);
         }
     }
+
     // 애니메이션이 끝나면 이벤트 호출
     public void OnAnimationComplete()
     {

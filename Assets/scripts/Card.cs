@@ -29,8 +29,14 @@ public class Card : MonoBehaviour
 	{
                 Vector3 dir = (cardPosition - gameObject.transform.position);
                 if (dir.magnitude > 0.1f)
+                {
 			gameObject.transform.position += dir.normalized * 10.0f * Time.deltaTime;
-		
+                        if ((cardPosition - gameObject.transform.position).magnitude < 0.1f)
+                        {
+                                 gameObject.transform.position = cardPosition;
+                        }
+		}
+
 	} 
 
 	public void Setting(int number, Vector2 pos)
